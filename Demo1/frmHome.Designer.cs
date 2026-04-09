@@ -32,6 +32,7 @@
             lblNome = new Label();
             btnColore = new Button();
             panel1 = new Panel();
+            btnSalva = new Button();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
@@ -40,7 +41,6 @@
             txtEmail = new TextBox();
             txtCognome = new TextBox();
             txtNome = new TextBox();
-            btnSalva = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -80,6 +80,19 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(507, 410);
             panel1.TabIndex = 7;
+            // 
+            // btnSalva
+            // 
+            btnSalva.BackColor = Color.FromArgb(128, 255, 128);
+            btnSalva.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSalva.ForeColor = Color.White;
+            btnSalva.Location = new Point(41, 253);
+            btnSalva.Name = "btnSalva";
+            btnSalva.Size = new Size(137, 32);
+            btnSalva.TabIndex = 8;
+            btnSalva.Text = "SALVA";
+            btnSalva.UseVisualStyleBackColor = false;
+            btnSalva.Click += btnSalva_Click;
             // 
             // label4
             // 
@@ -156,19 +169,6 @@
             txtNome.PlaceholderText = "Inserisci tuo Nome ";
             txtNome.Size = new Size(320, 26);
             txtNome.TabIndex = 0;
-            // 
-            // btnSalva
-            // 
-            btnSalva.BackColor = Color.FromArgb(128, 255, 128);
-            btnSalva.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSalva.ForeColor = Color.White;
-            btnSalva.Location = new Point(48, 237);
-            btnSalva.Name = "btnSalva";
-            btnSalva.Size = new Size(137, 32);
-            btnSalva.TabIndex = 8;
-            btnSalva.Text = "SALVA";
-            btnSalva.UseVisualStyleBackColor = false;
-            btnSalva.Click += btnSalva_Click;
             // 
             // frnHome
             // 
