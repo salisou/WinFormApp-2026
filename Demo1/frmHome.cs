@@ -25,6 +25,7 @@ namespace Demo1
             string email = txtEmail.Text;
             string password = txtPassword.Text;
 
+            // Commentio: Qui potresti aggiungere la logica per salvare i dati, ad esempio in un database o in un file.
 
             MessageBox.Show("Dati salvati:\n" +
                 "Nome: " + nome + 
