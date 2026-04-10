@@ -105,7 +105,7 @@ namespace Demo1
                 spazioLavoro.Cells[row, 1].Value = txtNome.Text;      // Colonna Nome
                 spazioLavoro.Cells[row, 2].Value = txtCognome.Text;   // Colonna Cognome
                 spazioLavoro.Cells[row, 3].Value = txtEmail.Text;     // Colonna Email
-                spazioLavoro.Cells[row, 4].Value = txtPassword.Text;  // ⚠ Password (non sicuro)
+                spazioLavoro.Cells[row, 4].Value = txtPassword.Text;  // ⚠ Password (non sicuro) da sistemare 
 
                 // Salvo il file Excel
                 package.Save();
