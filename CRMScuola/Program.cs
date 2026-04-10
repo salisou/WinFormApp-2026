@@ -1,7 +1,4 @@
-using Demo1.Forms;
-using OfficeOpenXml;
-
-namespace Demo1
+namespace CRMScuola
 {
     internal static class Program
     {
@@ -11,13 +8,10 @@ namespace Demo1
         [STAThread]
         static void Main()
         {
-            // Imposta la licenza per EPPlus (va fatto una sola volta all'avvio)
-            ExcelPackage.License.SetNonCommercialPersonal("Moussa");
-
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new ListBoxButtonTextBox());
+            //Application.Run(new Form1());
         }
     }
 }
