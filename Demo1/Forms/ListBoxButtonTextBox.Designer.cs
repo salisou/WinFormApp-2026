@@ -36,6 +36,7 @@
             btnModifica = new Button();
             btnElimina = new Button();
             pictureBox1 = new PictureBox();
+            listBox1 = new ListBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -44,42 +45,46 @@
             // 
             panel1.BackColor = Color.DarkOliveGreen;
             panel1.Controls.Add(listTask);
-            panel1.Location = new Point(108, 73);
+            panel1.Location = new Point(123, 97);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(297, 339);
+            panel1.Size = new Size(339, 452);
             panel1.TabIndex = 0;
             // 
             // listTask
             // 
             listTask.FormattingEnabled = true;
-            listTask.ItemHeight = 15;
-            listTask.Location = new Point(8, 8);
+            listTask.Location = new Point(9, 11);
+            listTask.Margin = new Padding(3, 4, 3, 4);
             listTask.Name = "listTask";
-            listTask.Size = new Size(284, 319);
+            listTask.Size = new Size(324, 424);
             listTask.TabIndex = 0;
+            listTask.SelectedIndexChanged += listTask_SelectedIndexChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(159, 9);
+            label1.Location = new Point(182, 12);
             label1.Name = "label1";
-            label1.Size = new Size(123, 32);
+            label1.Size = new Size(152, 41);
             label1.TabIndex = 1;
             label1.Text = "ToDo-List";
             // 
             // txtTask
             // 
-            txtTask.Location = new Point(109, 48);
+            txtTask.Location = new Point(125, 64);
+            txtTask.Margin = new Padding(3, 4, 3, 4);
             txtTask.Name = "txtTask";
-            txtTask.Size = new Size(297, 23);
+            txtTask.Size = new Size(339, 27);
             txtTask.TabIndex = 3;
             // 
             // btnSalva
             // 
-            btnSalva.Location = new Point(17, 102);
+            btnSalva.Location = new Point(19, 136);
+            btnSalva.Margin = new Padding(3, 4, 3, 4);
             btnSalva.Name = "btnSalva";
-            btnSalva.Size = new Size(81, 28);
+            btnSalva.Size = new Size(93, 37);
             btnSalva.TabIndex = 4;
             btnSalva.Text = "Salva";
             btnSalva.UseVisualStyleBackColor = true;
@@ -87,9 +92,10 @@
             // 
             // btnModifica
             // 
-            btnModifica.Location = new Point(17, 150);
+            btnModifica.Location = new Point(19, 200);
+            btnModifica.Margin = new Padding(3, 4, 3, 4);
             btnModifica.Name = "btnModifica";
-            btnModifica.Size = new Size(81, 28);
+            btnModifica.Size = new Size(93, 37);
             btnModifica.TabIndex = 5;
             btnModifica.Text = "Modifica";
             btnModifica.UseVisualStyleBackColor = true;
@@ -97,9 +103,10 @@
             // 
             // btnElimina
             // 
-            btnElimina.Location = new Point(17, 198);
+            btnElimina.Location = new Point(19, 264);
+            btnElimina.Margin = new Padding(3, 4, 3, 4);
             btnElimina.Name = "btnElimina";
-            btnElimina.Size = new Size(81, 28);
+            btnElimina.Size = new Size(93, 37);
             btnElimina.TabIndex = 6;
             btnElimina.Text = "Elimina";
             btnElimina.UseVisualStyleBackColor = true;
@@ -108,20 +115,31 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.close;
-            pictureBox1.Location = new Point(390, 9);
+            pictureBox1.Location = new Point(446, 12);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(16, 16);
+            pictureBox1.Size = new Size(18, 21);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 7;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
+            // listBox1
+            // 
+            listBox1.FormattingEnabled = true;
+            listBox1.Location = new Point(592, 97);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(248, 304);
+            listBox1.TabIndex = 8;
+            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+            // 
             // ListBoxButtonTextBox
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSeaGreen;
-            ClientSize = new Size(413, 420);
+            ClientSize = new Size(1061, 560);
+            Controls.Add(listBox1);
             Controls.Add(pictureBox1);
             Controls.Add(btnElimina);
             Controls.Add(btnModifica);
@@ -130,6 +148,7 @@
             Controls.Add(label1);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "ListBoxButtonTextBox";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ListBoxButtonTextBox";
@@ -149,5 +168,6 @@
         private Button btnModifica;
         private Button btnElimina;
         private PictureBox pictureBox1;
+        private ListBox listBox1;
     }
 }

@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace Demo1.Forms
+﻿namespace Demo1.Forms
 {
     public partial class ListBoxButtonTextBox : Form
     {
@@ -44,21 +34,56 @@ namespace Demo1.Forms
 
         private void Modificatask()
         {
-            // Cpontrolla se è stato selezionato un elemento nella ListBox
+            // Controlla se è stato selezionato un elemento
             if (listTask.SelectedIndex != -1)
             {
+                if (txtTask.Text != string.Empty)
+                {
+                    // Sostituisce il valore selezionato con il nuovo testo
+                    listTask.Items[listTask.SelectedIndex] = txtTask.Text;
 
+                    txtTask.Clear();
+                    txtTask.Focus();
+                }
+                else
+                {
+                    MessageBox.Show("Inserisci un nuovo testo per modificare il task");
+                }
             }
-
-            //listTask.SelectedIndex != -1
-            // Recupero l'indice dell'elemento selezionato nella ListBox
-            //Salvare la modifica del task
+            else
+            {
+                MessageBox.Show("Seleziona un task da modificare");
+            }
         }
 
         private void btnElimina_Click(object sender, EventArgs e)
         {
-            var vlaue = listTask.SelectedIndex;
-            listTask.Items.RemoveAt(vlaue);
+            if (listTask.SelectedIndex != -1)
+            {
+                listTask.Items.RemoveAt(listTask.SelectedIndex);
+                txtTask.Clear();
+                txtTask.Focus();
+            }
+            else
+            {
+                MessageBox.Show("Seleziona un task da eliminare");
+            }
+        }
+
+        private void listTask_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listTask.SelectedIndex != -1)
+            {
+                txtTask.Text = listTask.SelectedItem!.ToString();
+            }
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listTask.SelectedIndex != -1)
+            {
+                txtTask.Text = listTask.SelectedItem.ToString();
+            }
         }
     }
 }
