@@ -31,11 +31,16 @@
             panel1 = new Panel();
             panel2 = new Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
+            pictureBox1 = new PictureBox();
+            panel1.SuspendLayout();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.BackColor = Color.Teal;
+            panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
@@ -65,6 +70,16 @@
             tableLayoutPanel1.Size = new Size(1148, 618);
             tableLayoutPanel1.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.close;
+            pictureBox1.Location = new Point(1108, 7);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(34, 35);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            // 
             // frmMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -76,7 +91,9 @@
             Name = "frmMain";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmMain";
+            panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -85,5 +102,6 @@
         private Panel panel1;
         private Panel panel2;
         private TableLayoutPanel tableLayoutPanel1;
+        private PictureBox pictureBox1;
     }
 }
