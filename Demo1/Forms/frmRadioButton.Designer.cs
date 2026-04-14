@@ -62,7 +62,7 @@
             panel1.Controls.Add(label2);
             panel1.Controls.Add(rdbFemmina);
             panel1.Controls.Add(rdbMaschio);
-            panel1.Location = new Point(467, 18);
+            panel1.Location = new Point(331, 18);
             panel1.Name = "panel1";
             panel1.Size = new Size(158, 65);
             panel1.TabIndex = 2;
